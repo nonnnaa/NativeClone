@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.s.g.ana"
+    namespace = "com.admob.nativeads"
     compileSdk = 36
     defaultConfig {
         minSdk = 27

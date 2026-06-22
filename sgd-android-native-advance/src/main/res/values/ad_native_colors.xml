@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Text Colors -->
     <color name="cta_btn_text_color">#FFFFFFFF</color>
-    <color name="headline_text_color">#FF000000</color>
-    <color name="body_text_color">#FF000000</color>
-    <color name="native_fullscreen_bg_color">#FF000000</color>
+    <color name="headline_text_color">#FFFFFFFF</color>
+    <color name="body_text_color">#FFB0B0C0</color>
+
+    <!-- General Ad Colors -->
+    <color name="ad_bg_color">#FF1A1A2E</color>
+    <color name="ad_card_surface">#FF252538</color>
+    <color name="ad_badge_bg">#FFEAB308</color>
+    <color name="ad_badge_text">#FF000000</color>
+    
+    <!-- CTA Button Colors -->
+    <color name="cta_gradient_start">#FF386BF6</color>
+    <color name="cta_gradient_end">#FF7C3AED</color>
+    
+    <!-- Fullscreen Specific -->
+    <color name="native_fullscreen_bg_color">#FF0F0F1A</color>
+    <color name="skip_bg_color">#80000000</color>
+    <color name="skip_text_color">#FFE0E0E0</color>
 </resources>

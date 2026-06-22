@@ -48,18 +48,17 @@
     <style name="Native.AdIcon">
         <item name="android:text">Ad</item>
         <item name="android:textSize">10sp</item>
-        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColor">@color/ad_badge_text</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_gravity">center</item>
-        <item name="android:background">@drawable/ad_native_ad_icon_bg</item>
+        <item name="android:background">@drawable/bg_ad_badge</item>
         <item name="android:paddingLeft">6dp</item>
         <item name="android:paddingRight">6dp</item>
-        <item name="android:paddingTop">3dp</item>
-        <item name="android:paddingBottom">3dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:minWidth">20dp</item>
-        <item name="android:minHeight">20dp</item>
     </style>
 
     <!--add native full style-->
