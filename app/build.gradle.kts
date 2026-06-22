@@ -36,7 +36,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":sgd-android-native-advance"))
+    implementation(project(":admob-native-advance"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

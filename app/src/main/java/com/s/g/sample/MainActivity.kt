@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
             adKey = "native_test",
             adID = "ca-app-pub-3940256099942544/2247696110",
             adName = "google_ad_mob",
-            layout = "l_full1",
+            layout = "fullscreen_layout",
             isShowCountDown = true,
             countDownTotalSecond = 5
         )

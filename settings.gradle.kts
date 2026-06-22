@@ -30,6 +30,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "sgd-ana-sample"
+rootProject.name = "admob-nativeads-sample"
 include(":app")
-include(":sgd-android-native-advance")
+include(":admob-native-advance")

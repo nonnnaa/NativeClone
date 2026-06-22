@@ -5,5 +5,5 @@ plugins {
     alias(libs.plugins.android.library) apply false
 }
 tasks.register("buildNativeAdvanceDebugAar") {
-    dependsOn(":sgd-android-native-advance:assembleDebug")
+    dependsOn(":admob-native-advance:assembleDebug")
 }
