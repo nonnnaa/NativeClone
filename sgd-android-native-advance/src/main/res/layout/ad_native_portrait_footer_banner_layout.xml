@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.gms.ads.nativead.NativeAdView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/banner_native_ad"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ad_banner_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ad_native_bg"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/ad_app_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_ad_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/ad_native_ad_icon_bg"
+            android:paddingStart="6dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="6dp"
+            android:paddingBottom="2dp"
+            android:text="Ad"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            app:layout_constraintStart_toEndOf="@id/ad_app_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ad_headline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="12dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="CAPCUT PRO"
+            android:textColor="@color/headline_text_color"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/ad_call_to_action"
+            app:layout_constraintStart_toEndOf="@id/tv_ad_badge"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ad_body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Unlock limitless editing and effects"
+            android:textColor="@color/body_text_color"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@id/ad_call_to_action"
+            app:layout_constraintStart_toEndOf="@id/ad_app_icon"
+            app:layout_constraintTop_toBottomOf="@id/ad_headline" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/ad_call_to_action"
+            android:layout_width="80dp"
+            android:layout_height="36dp"
+            android:background="@drawable/ad_native_cta_button_bg"
+            android:gravity="center"
+            android:text="Get"
+            android:textAllCaps="false"
+            android:textColor="@color/cta_btn_text_color"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.gms.ads.nativead.NativeAdView>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="cta_btn_text_color">#FFFFFFFF</color>
+    <color name="headline_text_color">#FF000000</color>
+    <color name="body_text_color">#FF000000</color>
+    <color name="native_fullscreen_bg_color">#FF000000</color>
+</resources>

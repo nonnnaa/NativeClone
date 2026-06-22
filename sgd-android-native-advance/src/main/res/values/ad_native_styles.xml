@@ -1,0 +1,82 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Namespace gốc -->
+    <style name="Native">
+        <item name="android:background">@drawable/ad_native_bg</item>
+    </style>
+
+    <!-- ✅ Nút "Call to Action" -->
+    <style name="Native.AdButton">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/cta_btn_text_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/ad_native_cta_button_bg</item>
+
+    </style>
+
+
+    <!-- ✅ Tiêu đề quảng cáo -->
+    <style name="Native.AdHeadline">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:textColor">@color/headline_text_color</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- ✅ Nội dung quảng cáo -->
+    <style name="Native.AdBody">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:textColor">@color/body_text_color</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:alpha">0.7</item>
+    </style>
+
+    <!-- ✅ Nhãn “Ad” nhỏ kế bên -->
+    <style name="Native.AdIcon">
+        <item name="android:text">Ad</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/ad_native_ad_icon_bg</item>
+        <item name="android:paddingLeft">6dp</item>
+        <item name="android:paddingRight">6dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">20dp</item>
+        <item name="android:minHeight">20dp</item>
+    </style>
+
+    <!--add native full style-->
+    <!-- Base application theme. -->
+    <style name="NativeFullTheme" parent="android:Theme.Light.NoTitleBar.Fullscreen">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="NativeFullTheme.AdAttribution">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">left</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:text">@string/ad_attribution</item>
+        <item name="android:background">#FFCC66</item>
+        <item name="android:width">15dp</item>
+        <item name="android:height">15dp</item>
+    </style>
+</resources>
