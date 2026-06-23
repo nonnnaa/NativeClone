@@ -1,22 +1,25 @@
 package com.admob.nativeads.nativead
+
 interface INativeAdCallback {
 
-    //ad AdListener
-    fun onAdLoaded()
-    fun onAdFailed(message: String)
-    fun onAdClicked()
-    fun onAdClosed()
-    fun onAdImpression(adSourceID: String)
-    fun onAdSwipeGestureClicked()
-    fun onAdOpened()
+    // AdListener events
+    fun onAdLoaded() {}
+    fun onAdFailed(message: String) {}
+    fun onAdClicked() {}
+    fun onAdClosed() {}
+    fun onAdImpression(adSourceID: String) {}
+    fun onAdSwipeGestureClicked() {}
+    fun onAdOpened() {}
 
-    //revenue
-    fun onAdRevenuePaid(microsValue: Long,
-                        currencyCode: String,
-                        precision: Int,
-                        adNetwork: String)
+    // Revenue tracking
+    fun onAdRevenuePaid(
+        microsValue: Long,
+        currencyCode: String,
+        precision: Int,
+        adNetwork: String
+    ) {}
 
-    //countdown and close button
-    fun onCloseButtonClicked()
-    fun onCountdownFinished()
+    // Countdown and close button actions
+    fun onCloseButtonClicked() {}
+    fun onCountdownFinished() {}
 }

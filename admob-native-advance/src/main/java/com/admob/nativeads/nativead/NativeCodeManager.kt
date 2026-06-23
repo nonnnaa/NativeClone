@@ -15,6 +15,7 @@ object NativeCodeManager {
     }
 
     @JvmStatic
+    @JvmOverloads
     fun registerNativeAd(
         adKey: String,
         adID: String,
@@ -41,7 +42,7 @@ object NativeCodeManager {
         testMode: Boolean,
         testActivity: Activity?,
         adKey: String,
-        callback: INativeAdCallback
+        callback: INativeAdCallback?
     ) {
         val functionTag = "$adKey - loadNativeAd"
         log(TAG, "$functionTag - Preparing to load Native Ad with Ad Key: $adKey")
@@ -66,7 +67,7 @@ object NativeCodeManager {
         adKey: String,
         width: Int, height: Int,
         x: Int, y: Int,
-        callback: INativeAdCallback
+        callback: INativeAdCallback?
     ) {
         val functionTag = "$adKey - showNativeAd"
         if (!nativeAdMap.containsKey(adKey)) {
@@ -88,42 +89,6 @@ object NativeCodeManager {
             nativeAd.startCountdown(callback)
 
             log(TAG, "$functionTag - Native Ad displayed on screen.")
-        }
-    }
-
-    @JvmStatic
-    fun showNativeAdOnTop(
-        testMode: Boolean,
-        testActivity: Activity?,
-        adKey: String,
-        width: Int, height: Int,
-        x: Int, y: Int,
-        callback: INativeAdCallback?
-    ) {
-        val functionTag = "$adKey - showNativeAdOnTop"
-        log(TAG, "$functionTag - CALLED width=$width height=$height x=$x y=$y")
-
-        try {
-            if (!nativeAdMap.containsKey(adKey)) {
-                log(TAG, "$functionTag - key not found in map. Map keys: ${nativeAdMap.keys}")
-                return
-            }
-
-            val activity = if (testMode) testActivity else UnityPlayer.currentActivity
-            log(TAG, "$functionTag - activity: $activity")
-
-            activity?.runOnUiThread {
-                try {
-                    val nativeAd = nativeAdMap[adKey]
-                    log(TAG, "$functionTag - nativeAd: $nativeAd, nativeAdView: ${nativeAd?.nativeAdView}")
-                    nativeAd?.attachToWindowManagerOnTop(activity, width, height, x, y)
-                    nativeAd?.startCountdown(callback)
-                } catch (e: Exception) {
-                    log(TAG, "$functionTag - runOnUiThread error: ${e.message}")
-                }
-            }
-        } catch (e: Exception) {
-            log(TAG, "$functionTag - outer error: ${e.message}")
         }
     }
 
@@ -165,5 +130,26 @@ object NativeCodeManager {
             nativeAdMap[adKey]?.destroyNativeAd()
         }
         log(TAG, "$functionTag - Native Ad destroyed and resources cleaned up.")
+    }
+
+    // Overloaded convenience methods for Unity C# (avoids passing false, null on every call)
+    @JvmStatic
+    fun loadNativeAd(adKey: String, callback: INativeAdCallback?) {
+        loadNativeAd(false, null, adKey, callback)
+    }
+
+    @JvmStatic
+    fun showNativeAd(adKey: String, width: Int, height: Int, x: Int, y: Int, callback: INativeAdCallback?) {
+        showNativeAd(false, null, adKey, width, height, x, y, callback)
+    }
+
+    @JvmStatic
+    fun hideNativeAd(adKey: String) {
+        hideNativeAd(false, null, adKey)
+    }
+
+    @JvmStatic
+    fun destroyNativeAd(adKey: String) {
+        destroyNativeAd(false, null, adKey)
     }
 }
